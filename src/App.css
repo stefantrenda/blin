@@ -1,0 +1,298 @@
+/* CSS RESETS */
+body {
+  margin: 0;
+}
+* {
+  box-sizing: border-box;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ul,
+ol {
+  margin-top: 0;
+}
+
+img {
+  max-width: 100%;
+}
+/* !! */
+
+@font-face {
+  font-family: "Robot";
+  src: url("./Fonts/Roboto-Regular.ttf");
+}
+
+body {
+  font-family: "Robot", sans-serif;
+}
+
+:root {
+  --color-black: #000000;
+  --color-white: #ffffff;
+  --color-gray: #6b6b6b;
+  --color-primary: #cccccc;
+}
+
+.roboto-thin {
+  font-family: "Roboto", sans-serif;
+  font-weight: 100;
+  font-style: normal;
+}
+
+.roboto-light {
+  font-family: "Roboto", sans-serif;
+  font-weight: 300;
+  font-style: normal;
+}
+
+.roboto-regular {
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.roboto-medium {
+  font-family: "Roboto", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+}
+
+.roboto-bold {
+  font-family: "Roboto", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
+.roboto-black {
+  font-family: "Roboto", sans-serif;
+  font-weight: 900;
+  font-style: normal;
+}
+
+.roboto-thin-italic {
+  font-family: "Roboto", sans-serif;
+  font-weight: 100;
+  font-style: italic;
+}
+
+.roboto-light-italic {
+  font-family: "Roboto", sans-serif;
+  font-weight: 300;
+  font-style: italic;
+}
+
+.roboto-regular-italic {
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  font-style: italic;
+}
+
+.roboto-medium-italic {
+  font-family: "Roboto", sans-serif;
+  font-weight: 500;
+  font-style: italic;
+}
+
+.roboto-bold-italic {
+  font-family: "Roboto", sans-serif;
+  font-weight: 700;
+  font-style: italic;
+}
+
+.roboto-black-italic {
+  font-family: "Roboto", sans-serif;
+  font-weight: 900;
+  font-style: italic;
+}
+
+.banner-text {
+  font-weight: 800;
+  font-size: 7.5rem;
+}
+
+.line {
+  width: 80%;
+  height: 0;
+  border-bottom: 12px solid white;
+  position: absolute;
+}
+
+.hr-lines {
+  position: relative;
+}
+
+.hr-lines:after {
+  content: " ";
+  height: 12px;
+  width: 130px;
+  background: white;
+  display: block;
+  position: absolute;
+  top: 40%;
+  left: 100%;
+}
+
+
+.custom-header:after {
+  content: "";
+  position: absolute;
+  bottom: -30px;
+  height: 30px;
+  width: 60px;
+  background-color: black;
+  border-bottom-left-radius: 100em;
+  border-bottom-right-radius: 100em;
+  border: 1px solid  var(--color-gray);
+  border-top: 0;
+}
+
+/* height: 40px;
+    width: 90px;
+    background-color: black;
+    border-bottom-left-radius: 40px;
+    border-bottom-right-radius: 40px;
+    border: 1px solid gray;
+    border-top: 0; */
+
+.lineMenu {
+  display: flex;
+  flex-direction: row;
+  cursor: default;
+}
+
+.lineMenu:before,
+.lineMenu:after {
+  content: "";
+  flex: 1 1;
+  margin: auto;
+  width: 1.5em;
+  border-bottom: 5px solid transparent;
+  transition: border-color 0.5s ease;
+}
+
+.lineMenu:hover:before,
+.lineMenu:hover:after {
+  border-bottom: 5px solid white;
+}
+
+.lineMenu:before {
+  margin-right: 10px;
+}
+
+.lineMenu:after {
+  margin-left: 10px;
+}
+
+.semi-circle {
+  width: 4rem;
+  height: 2rem;
+  background-color: black;
+  border-radius: 0 0 10rem 10rem;
+  border: 1px solid white;
+}
+.menu-navs {
+  color: #d0d0d0;
+}
+.menu-navs:hover {
+  color: var(--color-white);
+  font-weight: 800;
+}
+
+.hr-invisible {
+  visibility: hidden;
+  opacity: 0;
+  transition: visibility 0s linear 0.4s, opacity 0.4s linear;
+}
+
+.hr-visible {
+  visibility: visible;
+  opacity: 1;
+  transition: visibility 0s linear 0s, opacity 0.4s linear;
+}
+
+.scrollbar-style::-webkit-scrollbar {
+  display: none; 
+}
+.scrollbar-style {
+  -ms-overflow-style: none; 
+  scrollbar-width: none; 
+}
+
+.menu-navs-links {
+  color: #d0d0d0;
+  /* font-size: 12px; */
+}
+.menu-navs-links:hover {
+  color: white;
+  font-weight: 600;
+}
+
+
+.link-block {
+  display: block; 
+  padding: 4px 0;
+}
+
+
+@keyframes smoothBounceDown {
+  0% {
+    transform: translateY(0%);
+    opacity: 0;
+  }
+  50% {
+    transform: translateY(7%);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+.animateSmoothBounceDown {
+  animation: smoothBounceDown 0.8s cubic-bezier(0.215, 0.61, 0.355, 1) forwards;
+}
+
+.svg-container.crash {
+  animation: crashAndReturn 2s ease-in-out forwards;
+}
+
+@keyframes crashAndReturn {
+  0%,
+  100% {
+    transform: translateX(0%);
+  }
+  50% {
+    transform: translateX(7px);
+  }
+}
+
+.hr-container.crash {
+  animation: crashAndReturnHr 2s ease-in-out forwards;
+}
+
+@keyframes crashAndReturnHr {
+  0%,
+  100% {
+    transform: translateX(0%);
+  }
+  50% {
+    transform: translateX(-7px);
+  }
+}
+@keyframes pseudoShrinkAndExpandWidth {
+  0%, 100% {
+    transform: scaleX(1);
+  }
+  50% {
+    transform: scaleX(0.5); 
+  }
+}
+
+.crashHR {
+  animation: pseudoShrinkAndExpandWidth 2s ease-in-out forwards;
+}

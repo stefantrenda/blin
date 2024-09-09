@@ -1,0 +1,91 @@
+.read-more-button {
+  display: inline-block;
+  width: 100%;
+  height: 2.8rem;
+  line-height: 44px;
+  border: 1px solid grey;
+  text-align: center;
+  background: transparent;
+  color: #ffffff;
+  text-transform: uppercase;
+  font-family: "Roboto", sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+  text-decoration: none;
+  /* transition: background-color 0.3s;  */
+}
+
+.nav-button {
+  width: 40px;
+  height: 40px;
+  background-color: black;
+  color: #6b6b6b;
+  border: 1px solid #6b6b6b;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px;
+  margin: 0 10px;
+  cursor: pointer;
+  user-select: none;
+  transition: all 0.5s ease;
+}
+.nav-button:hover {
+  background-color: white;
+  color: black;
+  border: 1px solid black;
+}
+
+.nav-button svg path {
+  fill: white;
+  transition: fill 0.5s ease;
+}
+
+.nav-button:hover svg path {
+  fill: black;
+}
+
+.button-container {
+  position: relative;
+  overflow: hidden;
+}
+
+.read-more-button {
+  text-decoration: none;
+  color: white;
+  border: 2px solid white;
+  transition: all 0.3s ease;
+  position: relative;
+  z-index: 1;
+}
+
+.line-logo-container {
+  position: absolute;
+  top: 0;
+  transform: scaleY(0);
+  transition: transform 0.3s ease;
+  z-index: 0;
+}
+
+.line-logo-container.top {
+  transform-origin: top;
+}
+
+.line-logo-container.bottom {
+  transform-origin: bottom;
+}
+
+.button-container:hover .line-logo-container {
+  transform: scaleY(1);
+}
+
+.right {
+  right: 0;
+}
+
+.left {
+  left: 10px;
+}
+.right-end {
+  right: 15px;
+}
